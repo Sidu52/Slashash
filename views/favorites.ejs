@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Slashash</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="your-integrity-hash" crossorigin="anonymous" />
+  <!-- Bootstrp 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container mt-4">
+    <div class="col-12 d-flex align-items-center justify-content-center">
+        <a href="/" onclick="goBack()" class="bg-secondary-subtle p-2 mx-3 rounded-circle"><i class="fas fa-arrow-left"></i></a>
+        <h1 class="text-center mb-3">Favorite Movies & Tv Shows</h1>
+    </div>
+    
+    <div class="row" id="favoriteMovies">
+      <% if (favorites.length > 0) { %>
+        <% favorites.forEach(favorite => { %>
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img src="<%= favorite.poster %>" class="card-img-top" alt="<%= favorite.title %>">
+              <div class="card-body">
+                <h5 class="card-title"><%= favorite.title %> (<%= favorite.year %>)</h5>
+                <p class="card-text">Type: <%= favorite.type %></p>
+              </div>
+            </div>
+          </div>
+        <% }) %>
+      <% } else { %>
+        <p>No favorites yet.</p>
+      <% } %>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Add your custom JavaScript for displaying favorite movies -->
+</body>
+</html>
