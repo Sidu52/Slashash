@@ -7,7 +7,7 @@ Favorite Movies: Users can favorite a movie from the search results, saving it t
 View Favorites: Users can view all their saved favorite movies from the database.
 
 Install Process
-Clone the repo: git clone https://github.com/your_username/movie-search-app.git
+Clone the repo: git clone https://github.com/Sidu52/Slashash.git
 Navigate to root directory
 npm i
 Set up .env file according sample.env
